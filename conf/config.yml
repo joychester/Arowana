@@ -1,0 +1,4 @@
+# config.yml
+
+sinatraport: 4567
+dbconnect: postgres://postgres:root@localhost:5432/sinatra_web
