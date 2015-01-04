@@ -25,9 +25,10 @@ INSERT INTO "user" (username, pwd, permission) VALUES ('admin', 'admin', 'rw');
 ```
   
 #How to run the Application(on c9.io):  
-
+```
 $ rackup config.ru -p $PORT -o $IP  
-
-Insprired by  
+```
+  
+Inspired from  
 [Structuring Sinatra Applications](http://blog.sourcing.io/structuring-sinatra)  
 [Structuring Sinatra Apps](http://graybike.co/2014/09/27/structuring-sinatra-apps-part-1/)  
