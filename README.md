@@ -2,14 +2,14 @@ Structuring Sinatra Web Application
 
 -----------------
 #Precondition:  
-1. bundle install  
-2. check how to start the postgresql service in [c9.io](https://docs.c9.io/setting_up_postgresql.html)  
-3. create sinatra_web DB  
+* bundle install  
+* check how to start the postgresql service in [c9.io](https://docs.c9.io/setting_up_postgresql.html)  
+* create sinatra_web DB  
 ```
 postgres=# create database "sinatra_web";
 ```
   
-4. create "user" table in postgresql DB  
+* create "user" table in postgresql DB  
 ```
 CREATE TABLE "user" (
 	id serial Primary key NOT NULL,
@@ -19,7 +19,7 @@ CREATE TABLE "user" (
 );
 ```
   
-5. insert one record into user table  
+* insert one record into user table  
 ```
 INSERT INTO "user" (username, pwd, permission) VALUES ('admin', 'admin', 'rw');
 ```
