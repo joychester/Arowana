@@ -16,19 +16,16 @@ module SinatraWeb
                 input_pwd = params[:passwd]
                 
                 result = User.getUserByName(input_uname)
-                saved_pwd = result[:pwd]
                 
-                if input_pwd == saved_pwd
+                if result == nil
+                    return "nothing"
+                elsif input_pwd == result[:pwd]
                     session[:loginuser] = input_uname
                     return "allowed";
-                elsif input_pwd != saved_pwd
-                    return "refused"
                 else
-                    # return nil
-                    return "nothing"
+                    return "refused"
                 end
             end
-            
         end
     end
 end

@@ -1,5 +1,5 @@
-Structuring Sinatra Web Application  
-
+Structuring Sinatra Web Application
+  
 -----------------
 #Precondition:  
 * bundle install  

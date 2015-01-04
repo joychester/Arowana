@@ -7,7 +7,7 @@ require 'yaml'
 #load current file folder path to the $LOAD_PATH
 $: << File.expand_path(File.dirname(__FILE__))
 
-#load routes.rb file under app folder
+#load skeleton.rb file under app folder
 require 'app/routes'
 
 #load global config file
