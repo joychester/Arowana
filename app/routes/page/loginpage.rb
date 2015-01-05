@@ -1,6 +1,6 @@
 module SinatraWeb
-    module Routes
-        class LoginPage < RouteBase
+    module Page
+        class LoginPage < BasePage
             
             #check if there is no session record,try login
             get '/' do 
@@ -15,11 +15,12 @@ module SinatraWeb
                 input_uname = params[:username]
                 input_pwd = params[:passwd]
                 
-                result = User.getUserByName(input_uname)
+                result = SinatraWeb::DBModel::User.getUserByName(input_uname)
                 
                 if result == nil
                     return "nothing"
                 elsif input_pwd == result[:pwd]
+                    #save username to session
                     session[:loginuser] = input_uname
                     return "allowed";
                 else

@@ -1,6 +1,6 @@
 module SinatraWeb
-    module Routes
-        class HomePage < RouteBase
+    module Page
+        class HomePage < BasePage
             
             get '/home' do
                 # Pass session data to haml file by @param

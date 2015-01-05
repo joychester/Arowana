@@ -1,7 +1,11 @@
-class User < Sequel::Model(:user)
+module SinatraWeb
+    module DBModel
+        class User < Sequel::Model(:user)
     
-    def User.getUserByName(uname)
-        User[:username => uname]
+            def User.getUserByName(uname)
+                User[:username => uname]
+            end
+    
+        end
     end
-    
 end
