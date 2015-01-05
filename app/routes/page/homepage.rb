@@ -1,5 +1,6 @@
 module SinatraWeb
     module Page
+        
         class HomePage < BasePage
             
             get '/home' do

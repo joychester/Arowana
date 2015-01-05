@@ -6,7 +6,6 @@ module SinatraWeb
 
             configure do
                 set :views, 'app/views'
-                #set :root, App.root
             end
         end
     end

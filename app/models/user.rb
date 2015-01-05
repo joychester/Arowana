@@ -1,5 +1,6 @@
 module SinatraWeb
     module DBModel
+        
         class User < Sequel::Model(:user)
     
             def User.getUserByName(uname)

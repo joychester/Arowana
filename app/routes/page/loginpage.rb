@@ -1,5 +1,6 @@
 module SinatraWeb
     module Page
+        
         class LoginPage < BasePage
             
             #check if there is no session record,try login
