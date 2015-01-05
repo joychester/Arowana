@@ -1,2 +1,21 @@
-.page-header
-  %h1 Welcome <i> #{@login_name} </i>
+.container-fluid
+    .row
+        .col-md-2.sidebar
+            %ul.nav.nav-sidebar
+                %li 
+                    %a Hi, <i>#{@login_name}</i>
+                %li
+                    %a.active{:href => "#"} Overview
+                %li
+                    %a{:href => "#"} Trend
+                %li
+                    %a{:href => "#"} Analysis
+        .col-md-10
+            %h2.page-header Dashboard
+            .row.highcharts
+                .col-md-4
+                    %img.icon{:src => "http://www.w3schools.com/images/compatible_chrome.gif"}
+                .col-md-4
+                    %img.icon{:src => "http://www.w3schools.com/images/compatible_firefox.gif"}
+                .col-md-4
+                    %img.icon{:src => "http://www.w3schools.com/images/compatible_safari.gif"}

@@ -9,4 +9,10 @@
         %script{:src => "/highcharts/js/highcharts.js", :type => "text/javascript"}
         %script{:src => "/bootstrap/js/bootstrap.min.js", :type => "text/javascript"}
     %body
+        .topbar
+            .container
+                %img.stubhub_logo{:src => "/content_static/image/perfhublogo.png"}
         =yield
+        .footer.muted-text
+            %img.chrome_logo{:src=> "/content_static/image/chrome_logo.png"} <strong>&nbsp; Only Google Chrome Guaranteed</strong> :-)
+    
