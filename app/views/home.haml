@@ -2,20 +2,47 @@
     .row
         .col-md-2.sidebar
             %ul.nav.nav-sidebar
-                %li 
+                %li
                     %a Hi, <i>#{@login_name}</i>
                 %li
-                    %a.active{:href => "#"} Overview
+                    %a.active{:href => "#"} 
+                        %span.glyphicon.glyphicon-camera
+                        Overview
                 %li
-                    %a{:href => "#"} Trend
+                    %a{:href => "#"} 
+                        %span.glyphicon.glyphicon-stats
+                        Trend
                 %li
-                    %a{:href => "#"} Analysis
+                    %a{:href => "#"} 
+                        %span.glyphicon.glyphicon-tower
+                        Analysis
         .col-md-10
             %h2.page-header Dashboard
-            .row.highcharts
-                .col-md-4
-                    %img.icon{:src => "http://www.w3schools.com/images/compatible_chrome.gif"}
-                .col-md-4
-                    %img.icon{:src => "http://www.w3schools.com/images/compatible_firefox.gif"}
-                .col-md-4
-                    %img.icon{:src => "http://www.w3schools.com/images/compatible_safari.gif"}
+            .row
+                .highcharts-container#perftrend{:style => "width:100%; height:400px;"}
+:javascript
+        $(function () { 
+            $('#perftrend').highcharts({
+                chart: {
+                    type: 'area'
+                },
+                title: {
+                    text: 'Perf trend'
+                },
+                xAxis: {
+                    categories: ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun']
+                },
+                yAxis: {
+                    title: {
+                        text: 'Response Time'
+                    }
+                },
+                series: [{
+                    name: 'Sell_API',
+                    data: [100, 120, 125, 110, 99, 130, 105]
+                }, {
+                    name: 'Buy_API',
+                    data: [220, 220, 225, 200, 199, 230, 205]
+                }]
+            });
+        });

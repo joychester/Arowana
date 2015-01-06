@@ -143,3 +143,11 @@ p {
     top: 50%;
     left: 50%;
 }
+
+.page-title {
+    text-align: center;
+    font-family: Goudy Old Style;
+    font-weight: bold;
+    font-size: 40px;
+    color: #686868 ;
+}
