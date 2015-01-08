@@ -20,9 +20,14 @@ require 'app/routes/routebase'
 require 'app/routes/api/apimodule'
 require 'app/routes/page/pagemodule'
 
-module SinatraWeb
-    class App < Sinatra::Application
+require 'util/reflection'
 
+module SinatraWeb
+    
+    class App < Sinatra::Application
+        
+        include Reflection
+        
         configure do 
             #set :bind, '0.0.0.0'
             set :port, CONFIG['sinatraport']
@@ -33,11 +38,35 @@ module SinatraWeb
         use Rack::Deflater
         use Rack::Session::Pool, :expire_after => 7200
 
-        #declare Page Classes
-        use SinatraWeb::Page::LoginPage
-        use SinatraWeb::Page::HomePage
+        #declare/register Page Module for Rack middleware, check middleware.to_s
+        #example: use SinatraWeb::Page::LoginPage
+         
+        page_route_dir = App.root + '/app/routes/page'
         
-        #declare API Classes
-        use SinatraWeb::RestAPI::WPTAPI
+        Resolver.get_rb_filepath_recursive(page_route_dir).each { |filepath|
+            Resolver.get_file_class_name(filepath).each { |klassname|
+                begin
+                    use Object.const_get('SinatraWeb::Page::' + klassname)
+                rescue Exception => msg   
+                    puts "WARN: #{msg}"
+                end
+            }
+        }
+        
+        #declare/register Page Module for Rack middleware, check middleware.to_s
+        #example: use SinatraWeb::RestAPI::WPTAPI
+        api_route_dir = App.root + '/app/routes/api'
+        
+        Resolver.get_rb_filepath_recursive(api_route_dir).each { |filepath|
+            Resolver.get_file_class_name(filepath).each { |klassname|
+                begin
+                    use Object.const_get('SinatraWeb::RestAPI::' + klassname)
+                rescue Exception => msg   
+                    puts "WARN: #{msg}"
+                end
+            }
+        }
+       
     end
+    
 end
