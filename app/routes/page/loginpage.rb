@@ -3,11 +3,6 @@ module Arowana
         
         class LoginPage < BasePage
             
-            #check if there is no session record,try login
-            get '/' do 
-                redirect '/login'
-            end
-            
             get '/login' do
                 haml :login
             end

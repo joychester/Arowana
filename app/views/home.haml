@@ -1,21 +1,25 @@
 .container-fluid
     .row
         .col-md-2.sidebar
-            %ul.nav.nav-sidebar
+            %ul.nav.nav-sidebar.nav-list
                 %li
                     %a Hi, <i>#{@login_name}</i>
                 %li
                     %a.active{:href => "#"} 
-                        %span.glyphicon.glyphicon-camera
+                        %i.glyphicon.glyphicon-home.icon-white
                         Overview
                 %li
                     %a{:href => "#"} 
-                        %span.glyphicon.glyphicon-stats
+                        %i.glyphicon.glyphicon-stats
                         Trend
                 %li
                     %a{:href => "#"} 
-                        %span.glyphicon.glyphicon-tower
+                        %i.glyphicon.glyphicon-tower
                         Analysis
+                %li
+                    %a{:href => "/logout"}
+                        %i.glyphicon.glyphicon-off
+                        Logout
         .col-md-10
             %h2.page-header Dashboard
             .row

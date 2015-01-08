@@ -16,7 +16,14 @@ module Arowana
         }
         
         class BasePage < Arowana::Routes::RouteBase
-            #todo
+            
+            #logout route is used across all pages
+            get '/logout' do
+                #remove the session data
+                session[:loginuser] = nil
+                redirect "/login"
+            end
+            
         end
     end
 end
