@@ -1,4 +1,4 @@
-module SinatraWeb
+module Arowana
     module DBModel
         
         class User < Sequel::Model(:user)

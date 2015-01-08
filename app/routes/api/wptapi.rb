@@ -1,5 +1,5 @@
 # Any Sample project Rest APIs locates here
-module SinatraWeb
+module Arowana
     module RestAPI
         class WPTAPI < BaseAPI
             

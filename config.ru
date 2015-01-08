@@ -1,3 +1,3 @@
 require './app'
 
-run SinatraWeb::App
+run Arowana::App

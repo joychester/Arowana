@@ -1,4 +1,4 @@
-module SinatraWeb
+module Arowana
     module Page
         
         class LoginPage < BasePage
@@ -16,7 +16,7 @@ module SinatraWeb
                 input_uname = params[:username]
                 input_pwd = params[:passwd]
                 
-                result = SinatraWeb::DBModel::User.getUserByName(input_uname)
+                result = Arowana::DBModel::User.getUserByName(input_uname)
                 
                 if result == nil
                     return "nothing"

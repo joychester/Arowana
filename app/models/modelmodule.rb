@@ -1,6 +1,6 @@
 require 'util/reflection'
 
-module SinatraWeb
+module Arowana
     module DBModel
 
         dirname = File.expand_path(File.dirname(__FILE__))

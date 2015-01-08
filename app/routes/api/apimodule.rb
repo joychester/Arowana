@@ -1,6 +1,6 @@
 require 'util/reflection'
 
-module SinatraWeb
+module Arowana
     module RestAPI
         
         dirname = File.expand_path(File.dirname(__FILE__))
@@ -15,7 +15,7 @@ module SinatraWeb
             }
         }
 
-        class BaseAPI < SinatraWeb::Routes::RouteBase
+        class BaseAPI < Arowana::Routes::RouteBase
             #todo
         end
     end

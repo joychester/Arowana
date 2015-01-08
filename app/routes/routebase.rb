@@ -1,5 +1,5 @@
 
-module SinatraWeb
+module Arowana
     module Routes
 
         class RouteBase < Sinatra::Application

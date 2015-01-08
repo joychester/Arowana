@@ -1,6 +1,6 @@
 require 'util/reflection'
 
-module SinatraWeb
+module Arowana
     module Page
         
         dirname = File.expand_path(File.dirname(__FILE__))
@@ -15,7 +15,7 @@ module SinatraWeb
             }
         }
         
-        class BasePage < SinatraWeb::Routes::RouteBase
+        class BasePage < Arowana::Routes::RouteBase
             #todo
         end
     end

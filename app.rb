@@ -22,7 +22,7 @@ require 'app/routes/page/pagemodule'
 
 require 'util/reflection'
 
-module SinatraWeb
+module Arowana
     
     class App < Sinatra::Application
         
@@ -46,7 +46,7 @@ module SinatraWeb
         Resolver.get_rb_filepath_recursive(page_route_dir).each { |filepath|
             Resolver.get_file_class_name(filepath).each { |klassname|
                 begin
-                    use Object.const_get('SinatraWeb::Page::' + klassname)
+                    use Object.const_get('Arowana::Page::' + klassname)
                 rescue Exception => msg   
                     puts "WARN: #{msg}"
                 end
@@ -60,7 +60,7 @@ module SinatraWeb
         Resolver.get_rb_filepath_recursive(api_route_dir).each { |filepath|
             Resolver.get_file_class_name(filepath).each { |klassname|
                 begin
-                    use Object.const_get('SinatraWeb::RestAPI::' + klassname)
+                    use Object.const_get('Arowana::RestAPI::' + klassname)
                 rescue Exception => msg   
                     puts "WARN: #{msg}"
                 end

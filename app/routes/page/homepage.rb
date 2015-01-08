@@ -1,4 +1,4 @@
-module SinatraWeb
+module Arowana
     module Page
         
         class HomePage < BasePage
