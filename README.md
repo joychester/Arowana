@@ -3,13 +3,13 @@
 -----------------
 Starting from here to create your own web applications, or you want to learn how to wirte a sinatra module based app by example  
 
-#Folder structure for Arowana:  
+##Folder structure for Arowana:  
 ![folder-chart](https://github.com/joychester/Arowana/blob/master/Arowana_FolderStructure.png)  
 
-#MVC flow chart:  
+##MVC flow chart:  
 ![MVC-chart](https://github.com/joychester/Arowana/blob/master/Arowana_MVC_Relations.png)  
 
-#Precondition:  
+##Precondition:  
 * bundle install  
 * check how to start the postgresql service in [c9.io](https://docs.c9.io/setting_up_postgresql.html)  
 * set username/pwd as 'postgres'/'root' if you use my default settings
@@ -34,11 +34,12 @@ INSERT INTO "user" (username, pwd, permission) VALUES ('admin', 'admin', 'rw');
 ```
 * more psql commands, refer to [docs](http://www.postgresql.org/docs/9.4/static/app-psql.html)  
 
-#How to run the Application(on c9.io):  
+##How to run  
+### On c9.io:  
 ```
 $ rackup config.ru -p $PORT -o $IP  
 ```
-#How to run the Application(on your local):  
+### On your local machine:  
 ```
 $ rackup config.ru  
 ```  
