@@ -38,7 +38,10 @@ INSERT INTO "user" (username, pwd, permission) VALUES ('admin', 'admin', 'rw');
 ```
 $ rackup config.ru -p $PORT -o $IP  
 ```
-  
+#How to run the Application(on your local):  
+```
+$ rackup config.ru  
+```  
 Inspired from  
 [Structuring Sinatra Applications](http://blog.sourcing.io/structuring-sinatra)  
 [Structuring Sinatra Apps](http://graybike.co/2014/09/27/structuring-sinatra-apps-part-1/)  
