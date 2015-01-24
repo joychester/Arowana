@@ -12,7 +12,7 @@ Starting from here to create your own web applications, or you want to learn how
 ##Precondition:  
 * bundle install  
 * check how to start the postgresql service in [c9.io](https://docs.c9.io/setting_up_postgresql.html)  
-* set username/pwd as 'postgres'/'root' if you use my default settings
+* set `username`/`pwd` as `postgres`/`root` if you use my default settings
 * create sinatra_web DB  
 ```
 postgres=# create database "sinatra_web";
