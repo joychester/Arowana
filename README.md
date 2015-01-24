@@ -43,6 +43,9 @@ $ rackup config.ru -p $PORT -o $IP
 ```
 $ rackup config.ru  
 ```  
-Inspired from  
+##Thanks To
+###Inspired from  
 [Structuring Sinatra Applications](http://blog.sourcing.io/structuring-sinatra)  
 [Structuring Sinatra Apps](http://graybike.co/2014/09/27/structuring-sinatra-apps-part-1/)  
+[Sinatra Framework](http://www.sinatrarb.com/)  
+[c9.io](https://c9.io/)  
