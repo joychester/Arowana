@@ -3,6 +3,12 @@
 -----------------
 Starting from here to create your own web applications, or you want to learn how to wirte a sinatra module based app by example  
 
+#Folder structure for Arowana:  
+![folder-chart](https://github.com/joychester/Arowana/blob/master/Arowana_FolderStructure.png)  
+
+#MVC flow chart:  
+![MVC-chart](https://github.com/joychester/Arowana/blob/master/Arowana_MVC_Relations.png)  
+
 #Precondition:  
 * bundle install  
 * check how to start the postgresql service in [c9.io](https://docs.c9.io/setting_up_postgresql.html)  
