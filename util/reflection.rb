@@ -10,7 +10,8 @@ module Reflection
                 file.readlines.each do |line|
                     if line =~ /class\s/
                         arr = line.strip!.split
-                        klassname << arr[1]
+                        k_name = arr[1].include?('<') ? arr[1].split('<')[0] : arr[1]
+                        klassname << k_name
                     end
                 end
             end
