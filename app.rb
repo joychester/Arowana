@@ -24,7 +24,6 @@ module Arowana
         include Reflection
         
         configure do 
-            #set :bind, '0.0.0.0'
             set :root, App.root #used to construct the default :public_folder
             disable :method_override #disable the POST _method hack
         end
