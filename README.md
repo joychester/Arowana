@@ -12,12 +12,32 @@ Starting from here to create your own web applications, or you want to learn how
 ##Precondition:  
 * bundle install  
 * check how to start the postgresql service in [c9.io](https://docs.c9.io/setting_up_postgresql.html)  
+```
+sudo service postgresql start
+```
+* open psql prompt  
+```
+sudo sudo -u postgres psql
+```
+
 * set `username`/`pwd` as `postgres`/`root` if you use my default settings
+```
+postgres=# ALTER ROLE postgres WITH PASSWORD 'root';  
+```
+
 * create sinatra_web DB  
 ```
 postgres=# create database "sinatra_web";
 ```
-  
+* list DBs  
+```
+postgres=# \list
+```
+* connect sinatra_web DB
+```
+postgres=# \c sinatra_web
+```
+
 * create "user" table in postgresql DB  
 ```
 CREATE TABLE "user" (
@@ -27,10 +47,20 @@ CREATE TABLE "user" (
 	permission varchar(10) NOT NULL
 );
 ```
-  
+
+* list tables
+```
+sinatra_web=# \dt
+```
+
 * insert one record into user table  
 ```
 INSERT INTO "user" (username, pwd, permission) VALUES ('admin', 'admin', 'rw');
+```
+
+* quit 
+```
+sinatra_web=# \q
 ```
 * more psql commands, refer to [docs](http://www.postgresql.org/docs/9.4/static/app-psql.html)  
 
