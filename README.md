@@ -63,7 +63,15 @@ INSERT INTO "user" (username, pwd, permission) VALUES ('admin', 'admin', 'rw');
 sinatra_web=# \q
 ```
 * more psql commands, refer to [docs](http://www.postgresql.org/docs/9.4/static/app-psql.html)  
-
+```
+> $ sudo service postgresql start
+> $ sudo sudo -u postgres psql
+> Change PWD for postgres User : postgres=# ALTER ROLE postgres WITH PASSWORD '$
+> List all databases : postgres=# \list
+> Create DataBase: postgres=# create database "sinatra_web";
+> Create "user" table in postgresql DB
+> Check table name in postgresql DB
+```
 ##How to run  
 ### On c9.io:  
 ```
