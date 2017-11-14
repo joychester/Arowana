@@ -53,6 +53,11 @@ CREATE TABLE "user" (
 sinatra_web=# \dt
 ```
 
+* list table details
+```
+sinatra_web=# \dt+ <table_name>
+```
+
 * insert one record into user table  
 ```
 INSERT INTO "user" (username, pwd, permission) VALUES ('admin', 'admin', 'rw');
