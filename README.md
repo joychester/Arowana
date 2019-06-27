@@ -10,6 +10,7 @@ Starting from here to create your own web applications, or you want to learn how
 ![MVC-chart](https://github.com/joychester/Arowana/blob/master/Arowana_MVC_Relations.png)  
 
 ##Precondition:  
+* How to install ruby on your Mac [link](https://gorails.com/setup/osx/10.14-mojave#ruby)
 * bundle install  
 * check how to start the postgresql service in [c9.io](https://docs.c9.io/setting_up_postgresql.html)  
 ```
